@@ -17,13 +17,13 @@ This project is a simple Email Client that allows users to send and fetch emails
 - Python 3.x
 - Gmail account (with an app-specific password if 2FA is enabled)
 - The following Python libraries:
-    - `smtplib`
-    - `imaplib`
-    - `email`
-    - `socket`
-    - `ssl`
-    - `tkinter`
-    - `threading`
+  - `smtplib`
+  - `imaplib`
+  - `email`
+  - `socket`
+  - `ssl`
+  - `tkinter`
+  - `threading`
 
 ## Installation
 
@@ -78,8 +78,17 @@ python Gui.py
 ## GUI Screenshot
 
 ### Send Email Tab
+
 <img src="Assets/send-tab.png" alt="Send Email Tab" width="500" />
 
 ### Fetch Email Tab
+
 <img src="Assets/fetch-tab.png">
 
+### Sending Email in action
+
+<img src= "/Assets/Send-email.png">
+
+### Fetching Email in action
+
+<img src= "/Assets/Fetch-email.png">
