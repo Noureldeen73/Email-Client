@@ -7,6 +7,9 @@ import socket
 import ssl
 
 class EmailError(Exception):
+    """
+    Custom exception for email-related errors
+    """
     pass
 def send_email(sender_email, sender_password, receiver_email, subject, body):
     """
@@ -46,6 +49,7 @@ def send_email(sender_email, sender_password, receiver_email, subject, body):
 
 
         print("Email sent successfully")
+    # Handles common exceptions
     except smtplib.SMTPAuthenticationError as e:
         raise EmailError("Authentication failed. Please check your email and password." + str(e))
     except smtplib.SMTPConnectError as e:
@@ -69,6 +73,12 @@ def send_email(sender_email, sender_password, receiver_email, subject, body):
 
 
 def fetch_latest_email(email_address, password):
+    """
+    Fetches the latest email from the user's inbox
+    :param email_address: Email address
+    :param password: Email password
+    :return:
+    """
     try:
         # IMAP server settings
         imap_server = "imap.gmail.com"
@@ -109,6 +119,7 @@ def fetch_latest_email(email_address, password):
         html_body = ""  # For HTML emails
         attachments = []  # List to store attachment details
 
+        # **Extract email content**
         if msg.is_multipart():
             for part in msg.walk():
                 content_type = part.get_content_type()
@@ -145,6 +156,7 @@ def fetch_latest_email(email_address, password):
             "attachments": attachments
         }
 
+    # Handles common exceptions
     except imaplib.IMAP4.error:
         raise EmailError("IMAP login failed. Check your email and password.")
     except socket.gaierror:
