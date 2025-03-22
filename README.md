@@ -29,7 +29,7 @@ This project is a simple Email Client that allows users to send and fetch emails
 
 1. Clone the repository:
    ```sh
-   git clone <repository_url>
+   git clone https://github.com/Noureldeen73/Email-Client
    cd email-client
    ```
 2. Install required dependencies (if needed):
