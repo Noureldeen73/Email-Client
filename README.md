@@ -78,7 +78,8 @@ python Gui.py
 ## GUI Screenshot
 
 ### Send Email Tab
-![Send Email Tab](send-tab.png)
+<img src="send-tab.png" alt="Send Email Tab" width="500" />
+
 ### Fetch Email Tab
-![Fetch Email Tab](fetch-tab.png)
+<img src="fetch-tab.png">
 
